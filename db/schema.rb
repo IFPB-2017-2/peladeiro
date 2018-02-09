@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180205143322) do
+ActiveRecord::Schema.define(version: 20180208133537) do
 
   create_table "people", force: :cascade do |t|
     t.string "nome"
@@ -20,6 +20,18 @@ ActiveRecord::Schema.define(version: 20180205143322) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_people_on_user_id"
+  end
+
+  create_table "sports", force: :cascade do |t|
+    t.string "nome"
+    t.text "descricao"
+    t.text "regra"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "foto_file_name"
+    t.string "foto_content_type"
+    t.integer "foto_file_size"
+    t.datetime "foto_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
