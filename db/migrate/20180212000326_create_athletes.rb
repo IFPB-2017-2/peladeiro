@@ -4,6 +4,7 @@ class CreateAthletes < ActiveRecord::Migration[5.1]
       t.float :score
       t.integer :status
       t.references :person, foreign_key: true
+      t.references :group, foreign_key: true
 
       t.timestamps
     end
