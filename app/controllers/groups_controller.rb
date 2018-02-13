@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: [:show, :edit, :update, :destroy]
 
+
   # GET /groups
   # GET /groups.json
   def index
@@ -15,6 +16,11 @@ class GroupsController < ApplicationController
   # GET /groups/new
   def new
     @group = Group.new
+    if current_user.person.nil? == true
+      redirect_to new_person_path
+    end
+    @group.fundador = current_user.person
+    @esportes = Sport.all
   end
 
   # GET /groups/1/edit
@@ -69,6 +75,6 @@ class GroupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def group_params
-      params.require(:group).permit(:nome, :descricao, :esporte_id, :fundador_id, :estatuto)
+      params.require(:group).permit(:nome, :descricao, :sport_id, :fundador_id, :estatuto)
     end
 end

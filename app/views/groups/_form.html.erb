@@ -22,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :esporte_id %>
-    <%= form.text_field :esporte_id, id: :group_esporte_id %>
+    <%= form.label "Atividade Esportiva" %>
+    <%= form.select :sport_id, options_from_collection_for_select(@esportes, "id", "nome") %>
   </div>
 
   <div class="field">
@@ -38,5 +38,6 @@
 
   <div class="actions">
     <%= form.submit %>
-  </div>
+
+
 <% end %>
