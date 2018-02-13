@@ -1,33 +1,4 @@
 <main role="main">
-
- <!-- <div id="carousel-single" class="carousel slide" data-ride="carousel">
-   
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-single" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-single" data-slide-to="1" class=""></li>
-    </ol>
-
-    
-    <div class="carousel-inner">
-      <figure class="item preload loaded active" data-img-src=<%= image_path("padrao.jpg")%> style="background-image: url(<%= image_path("padrao.jpg")%>);">
-        <figcaption class="carousel-caption">
-          img-article </figcaption>
-      </figure>
-      <figure class="item preload loaded" data-img-src="http://lorempicsum.com/futurama/750/400/1" style="background-image: url(http://lorempicsum.com/futurama/750/400/1);">
-        <figcaption class="carousel-caption">
-          test – slider </figcaption>
-      </figure>
-    </div>
-
-    
-    <a class="left carousel-control" href="#carousel-single" data-slide="prev">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.422 7.406L10.828 12l4.594 4.594L14.016 18l-6-6 6-6z"></path></svg>
-    </a>
-    <a class="right carousel-control" href="#carousel-single" data-slide="next">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.984 6l6 6-6 6-1.406-1.406L13.172 12 8.578 7.406z"></path></svg>
-    </a>
-  </div> -->
-
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -66,9 +37,9 @@
     </div>
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron" id="hello">
-        <div class="container">
-          <h2 align="center">Grupos recentes</h2><br>
+      <div class="jumbotron">
+        <div class="container" id="hello">
+          <h1 align="center" class="alert alert-info">Grupos recentes</h1><br>
          <div class="row placeholders">
             <div class="col-xs-6 col-sm-3 placeholder">
               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
@@ -92,41 +63,29 @@
             </div>
           </div>
         </div>
-      </div>
-
-
-
+    
       <div class="container" id="hello2">
         <!-- Example row of columns -->
-        <h2 align="center">Eventos em destaque</h2><br>
+        <h1 align="center" class="alert alert-info">Eventos em destaque</h1><br>
         <div class="row" >
           <div class="col-md-4" >
-            <h2>Heading</h2>
+            <h2>Evento 01</h2>
             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div>
           <div class="col-md-4">
-            <h2>Heading</h2>
+            <h2>Evento 02</h2>
             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div>
           <div class="col-md-4">
-            <h2>Heading</h2>
+            <h2>Evento 03</h2>
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div>
         </div>
-
-        <hr>
-
       </div> <!-- /container -->
-
-    </main>
-
-    <footer class="container">
-      <p align="center">&copy; Company 2017-2018</p>
-      <%= link_to('Login', new_user_session_path) %>
-     <%= link_to('Logout', destroy_user_session_path, :method => 'delete') %>
-     <%= link_to('People', people_path) %>
-    </footer>
+    </div>
+   </div>
+ </main>
 
