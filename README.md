@@ -1,5 +1,10 @@
 # README
 
+### Acesse o guia [CONTRIBUTING.md](CONTRIBUTING.md) para obter informações 
+sobre as configurações iniciais para rodar o sistema.
+
+
+---
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

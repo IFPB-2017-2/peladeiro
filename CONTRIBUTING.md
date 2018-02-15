@@ -21,3 +21,15 @@ rails db:migrate
 ```rails
 rails db:drop
 ```
+
+##### Servidor de email -> MailCatcher
+Para instalar o [__MailCatcher__](https://mailcatcher.me/) rode o comando em sua box
+```
+gem install mailcatcher
+```
+__Não coloque__ *essa gem no seu Gemfile.* Rode o comando diretamente no terminal.
+
+Abra um terminal SSH especificamente para rodar esse servidor de e-mail. Para isso execute o comando
+``` 
+mailcatcher --ip 0.0.0.0 -f -v
+``` 
