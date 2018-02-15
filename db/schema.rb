@@ -10,7 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180208133537) do
+ActiveRecord::Schema.define(version: 20180212010233) do
+
+  create_table "athletes", force: :cascade do |t|
+    t.float "score"
+    t.integer "status"
+    t.integer "person_id"
+    t.integer "group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_athletes_on_group_id"
+    t.index ["person_id"], name: "index_athletes_on_person_id"
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.string "nome"
+    t.string "descricao"
+    t.integer "sport_id"
+    t.integer "fundador_id"
+    t.text "estatuto"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["fundador_id"], name: "index_groups_on_fundador_id"
+    t.index ["sport_id"], name: "index_groups_on_sport_id"
+  end
 
   create_table "people", force: :cascade do |t|
     t.string "nome"

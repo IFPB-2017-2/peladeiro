@@ -13,7 +13,7 @@
       left: 0;
       right: 0;
       bottom:0;
-      background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5));
+      background-image: linear-gradient(to bottom, transparent,#00FF00 );
       opacity: 0;
       will-change:opacity;
       transition: opacity 250ms ease-in-out;
@@ -26,7 +26,7 @@
 
 
   .carousel-control {
-    fill: #fff;
+    fill: #FFFF00; 
     background-image: none;
     display: flex;
     justify-content: center;
