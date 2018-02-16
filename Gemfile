@@ -56,3 +56,4 @@ gem 'devise', '~> 4.4', '>= 4.4.1'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem "paperclip", "~> 5.2.1"
+gem "simple_calendar", "~> 2.0"
