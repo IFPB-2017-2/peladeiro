@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180212010233) do
+ActiveRecord::Schema.define(version: 20180216025811) do
 
   create_table "athletes", force: :cascade do |t|
     t.float "score"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(version: 20180212010233) do
     t.datetime "updated_at", null: false
     t.index ["group_id"], name: "index_athletes_on_group_id"
     t.index ["person_id"], name: "index_athletes_on_person_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "descricao"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.string "local"
+    t.integer "group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_events_on_group_id"
   end
 
   create_table "groups", force: :cascade do |t|
