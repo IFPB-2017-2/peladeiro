@@ -1,23 +1,42 @@
-<p id="notice"><%= notice %></p>
+<div class="jumbotron">
+ <div class="container">
+    <% if notice == " " %>
+     <div class="alert alert-warning fade in alert-dismissable">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+        <strong><p id="notice"><%= notice %></p></strong>
+      </div>
+    <% end -%>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @sport.nome %>
-</p>
+     <div class="alert alert-info" style="margin-top:10px; text-align: center;">
+          <h1><span>Esportes</span></h1>
+      </div>
+      <section class="text-center">
+      <%= image_tag @sport.foto.url(:large, :class => 'img-responsive') %>
+      </section><br>
+      <section> 
+        <p>
+		  <strong>Nome:</strong>
+		  <%= @sport.nome %>
+		</p>
 
-<p>
-  <strong>Descricao:</strong>
-  <%= @sport.descricao %>
-</p>
+		<p>
+		  <strong>Descricao:</strong>
+		  <%= @sport.descricao %>
+		</p>
 
-<p>
-  <strong>Regra:</strong>
-  <%= @sport.regra %>
-</p>
+		<p>
+		  <strong>Regra:</strong>
+		  <%= @sport.regra %>
+		</p>
 
-<%= image_tag @sport.foto.url(:large) %>
-<%= image_tag @sport.foto.url(:medium) %>
-<%= image_tag @sport.foto.url(:thumb) %>
+		<section class=" text-center">
+			<%= link_to 'Editar', edit_sport_path(@sport), class:"btn  btn-primary" %>
+			<%= link_to 'Voltar', sports_path, class:"btn  btn-danger" %>
+		</section>
+  <!--  <%= image_tag @sport.foto.url(:large) %>
+		<%= image_tag @sport.foto.url(:medium) %>
+		<%= image_tag @sport.foto.url(:thumb) %> -->
 
-<%= link_to 'Edit', edit_sport_path(@sport) %> |
-<%= link_to 'Back', sports_path %>
+	  </section>
+	</div>
+</div>

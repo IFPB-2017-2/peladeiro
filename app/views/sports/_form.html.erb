@@ -1,3 +1,4 @@
+<div class="form-new">
 <%= form_with(model: sport, local: true, :html => {multipart: true}) do |form| %>
   <% if sport.errors.any? %>
     <div id="error_explanation">
@@ -13,24 +14,26 @@
 
   <div class="field">
     <%= form.label :nome %>
-    <%= form.text_field :nome, id: :sport_nome %>
+    <%= form.text_field :nome, id: :sport_nome, autofocus: true, type:"text", id:"inputNome",class:"form-control", placeholder:"Ex: Futebol", required:'autofocus' , autocomplete: "nome"%>
   </div>
 
   <div class="field">
     <%= form.label :descricao %>
-    <%= form.text_area :descricao, id: :sport_descricao %>
+    <%= form.text_area :descricao, id: :sport_descricao , autofocus: true, type:"text_area", id:"inputDescricao",class:"form-control", placeholder:"Breve descrição do esporte", autocomplete: "descricao", required:'autofocus' %>
   </div>
 
   <div class="field">
     <%= form.label :regra %>
-    <%= form.text_area :regra, id: :sport_regra %>
+    <%= form.text_area :regra, id: :sport_regra, autofocus: true, type:"text_area", id:"inputRegra",class:"form-control", placeholder:"Regras do esporte", autocomplete: "regra" , required:'autofocus' %>
   </div>
   <div class="field">
     <%= form.label :foto %>
-    <%= form.file_field :foto %>
+    <%= form.file_field :foto%>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+   <br> <%= form.submit "Salvar", class:"btn btn-lg btn-primary btn-block" %>
   </div>
+</div>
+
 <% end %>

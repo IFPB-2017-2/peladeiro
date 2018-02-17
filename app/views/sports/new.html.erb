@@ -1,5 +1,13 @@
-<h1>New Sport</h1>
+<div class="jumbotron">
+ <div class="container">
+	 <div class="alert alert-info" style="margin-top:10px; text-align: center;">
+       		<h1><span>Novo Esporte</span></h1>
+      </div>
 
-<%= render 'form', sport: @sport %>
+		<%= render 'form', sport: @sport %>
 
-<%= link_to 'Back', sports_path %>
+		<section class="form-new">
+		<%= link_to 'Voltar', sports_path, class:"btn btn-lg btn-danger btn-block" %>
+		</section>
+	</div>
+</div>

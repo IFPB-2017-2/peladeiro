@@ -4,6 +4,9 @@
    <!-- Main jumbotron for a primary marketing message or call to action -->
   <%= render partial: "home/dashboard"%> 
   
+  <!-- verifica se o usuário corrente é este gerente@peladeiro -->
+  <% if current_user.email == "gerente@peladeiro"%>
+  <%end%>
   <% else %>
    <%= render partial: "home/carousel"%>
      <!-- Main jumbotron for a primary marketing message or call to action -->

@@ -1,6 +1,14 @@
-<h1>Editing Sport</h1>
+<div class="jumbotron">
+ <div class="container">
+	 <div class="alert alert-info" style="margin-top:10px; text-align: center;">
+       		<h1><span>Editar Esporte</span></h1>
+      </div>
 
-<%= render 'form', sport: @sport %>
-
-<%= link_to 'Show', @sport %> |
-<%= link_to 'Back', sports_path %>
+		<%= render 'form', sport: @sport %>
+		
+		<section class="form-new">
+		 <%= link_to 'Detalhes', @sport, class:"btn btn-lg btn-success btn-block" %> 
+		 <%= link_to 'Voltar', sports_path,  class:"btn btn-lg btn-danger btn-block" %>
+		</section>
+	</div>
+</div>
