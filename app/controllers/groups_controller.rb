@@ -11,6 +11,8 @@ class GroupsController < ApplicationController
   # GET /groups/1
   # GET /groups/1.json
   def show
+    @event = Event.new
+    @event.group = @group
   end
 
   # GET /groups/new
@@ -25,6 +27,7 @@ class GroupsController < ApplicationController
 
   # GET /groups/1/edit
   def edit
+    @esportes = Sport.all
   end
 
   # POST /groups
