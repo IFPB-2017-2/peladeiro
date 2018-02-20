@@ -24,6 +24,6 @@ production:
 #  <<: *default
 #  database: db/production.sqlite3
   adapter: postgresql
-  database: peladeiro
+  database: de9mdan61rake7
   pool: 5
   timeout: 5000
