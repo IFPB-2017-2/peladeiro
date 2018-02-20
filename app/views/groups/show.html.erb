@@ -1,6 +1,23 @@
-<main role="main" class="container-fluid">
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@id": "<%= group_url(@group) %>"
+    "@type": "SportsOrganization",
+    "name": "<%= @group.nome %>",
+    "description": "<%= @group.descricao %>",
+    "sport:" "<%= @group.sport.nome %>",
+    "publishingPrinciples": "<%= @group.estatuto%>",
+    "foundingDate": "<%= @group.created_at %>",
+    "founder": {
+      "@type": "Person",
+      "@id": "<%= person_url(@group.fundador) %>",
+      "name": "<%= @group.fundador.nome %>"
+    }
+  }
 
-  <ul class="nav nav-tabs">
+</script>
+<main role="main" class="container-fluid">
+   <ul class="nav nav-tabs">
     <li role="presentation" class="active">
       <a href="#home" data-toggle="tab">Dashboard</a>
     </li>
@@ -8,9 +25,9 @@
       <a href="#atletas" data-toggle="tab">Atletas</a>
     </li>
     <li role="presentation">
-      <a href="#eventos" data-toggle="tab" id="clickEvent">Eventos</a>
+      <a href="#eventos" data-toggle="tab" id="clickEventEventos">Eventos</a>
       <script type="application/javascript">
-        $('#clickEvent').on('shown.bs.tab' , function () {
+        $('#clickEventEventos').on('shown.bs.tab' , function () {
             $('#calendar').fullCalendar({
                 header: {
                     center: 'month,agendaFourDay,agendaWeek' // buttons for switching between views
