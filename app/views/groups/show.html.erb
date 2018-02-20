@@ -1,11 +1,11 @@
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
-    "@id": "<%= group_url(@group) %>"
+    "@id": "<%= group_url(@group) %>",
     "@type": "SportsOrganization",
     "name": "<%= @group.nome %>",
     "description": "<%= @group.descricao %>",
-    "sport:" "<%= @group.sport.nome %>",
+    "sport": "<%= @group.sport.nome %>",
     "publishingPrinciples": "<%= @group.estatuto%>",
     "foundingDate": "<%= @group.created_at %>",
     "founder": {
