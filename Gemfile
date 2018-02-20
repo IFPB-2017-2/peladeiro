@@ -8,7 +8,8 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
-gem 'pg'
+gem 'pg', group: :production # Added postgres and made it production only.
+gem 'rails_12factor' # usado por heroku
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
