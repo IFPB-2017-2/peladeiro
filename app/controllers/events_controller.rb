@@ -15,7 +15,6 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = Event.new
-    @event.group = Group.first
   end
 
   # GET /events/1/edit
