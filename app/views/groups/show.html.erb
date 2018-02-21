@@ -5,7 +5,7 @@
     "@type": "SportsOrganization",
     "name": "<%= @group.nome %>",
     "description": "<%= @group.descricao %>",
-    "sport": "<%= @group.sport.nome %>",
+    "sport": "<%= sport_url(@group.sport) %>",
     "publishingPrinciples": "<%= @group.estatuto%>",
     "foundingDate": "<%= @group.created_at %>",
     "founder": {
