@@ -8,7 +8,10 @@
       "name": "<%= g.nome %>",
       "description": "<%= g.descricao %>",
       "sport": "<%= sport_url(g.sport) %>",
-      "publishingPrinciples": "<%= g.estatuto%>",
+      "publishingPrinciples": {
+       "@type": "CreativeWork",
+       "text": "<%= g.estatuto%>"
+     },
       "foundingDate": "<%= g.created_at %>",
       "founder": {
         "@type": "Person",

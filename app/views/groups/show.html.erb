@@ -6,7 +6,10 @@
     "name": "<%= @group.nome %>",
     "description": "<%= @group.descricao %>",
     "sport": "<%= sport_url(@group.sport) %>",
-    "publishingPrinciples": "<%= @group.estatuto%>",
+    "publishingPrinciples": {
+       "@type": "CreativeWork",
+       "text": "<%= @group.estatuto%>"
+     },
     "foundingDate": "<%= @group.created_at %>",
     "founder": {
       "@type": "Person",
