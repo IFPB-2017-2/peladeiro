@@ -17,10 +17,10 @@
       <ul class="nav navbar-nav">
         <% if user_signed_in?%>
         <li>
-           <%= link_to 'Meus Grupos' ,root_path+'#grupos' %>
+           <%= link_to 'Meus Grupos' ,groups_path %>
         </li>
         <li>
-           <%= link_to 'Meus Eventos' ,root_path+'#eventos' %>
+           <%= link_to 'Meus Eventos' ,events_path %>
         </li>
         <%else%>
          <li>

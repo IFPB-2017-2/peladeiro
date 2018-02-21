@@ -1,3 +1,25 @@
+<script type="application/ld+json">
+  [
+  <% @groups.each do |g| %>
+    {
+      "@context": "http://schema.org",
+      "@id": "<%= group_url(g) %>",
+      "@type": "SportsOrganization",
+      "name": "<%= g.nome %>",
+      "description": "<%= g.descricao %>",
+      "sport": "<%= sport_url(g.sport) %>",
+      "publishingPrinciples": "<%= g.estatuto%>",
+      "foundingDate": "<%= g.created_at %>",
+      "founder": {
+        "@type": "Person",
+        "@id": "<%= person_url(g.fundador) %>",
+        "name": "<%= g.fundador.nome %>"
+      }
+    },
+
+  <%end %>
+  ]
+</script>
 <p id="notice"><%= notice %></p>
 
 <h1>Groups</h1>
