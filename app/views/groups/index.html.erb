@@ -18,7 +18,9 @@
         "@id": "<%= person_url(g.fundador) %>",
         "name": "<%= g.fundador.nome %>"
       }
-    },
+    }<% unless g.equal?(@groups.last) %>
+      <%= ',' %>
+      <% end %>
 
   <%end %>
   ]
